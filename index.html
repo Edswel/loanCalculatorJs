@@ -12,8 +12,64 @@
   <title>Loan Calculator</title>
 </head>
 
-<body>
-  <h1>Apply...</h1>
+<body class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+          <form id="loan-form">
+            <div class="form-group pb-3">
+              <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input id="amount" class="form-control" type="number" placeholder="Loan Amount">
+              </div>
+            </div>
+            <div class="form-group pb-3">
+              <div class="input-group">
+                <span class="input-group-text">%</span>
+                <input id="interest" class="form-control" type="number" placeholder="Interest">
+              </div>
+            </div>
+            <div class="form-group pb-3">
+              <input id="years" class="form-control" type="number" placeholder="Loan Duration">
+            </div>
+            <div class="form-group d-grid">
+              <input type="button" class="btn btn-dark" type="submit" value="CALCULATE">
+            </div>
+          </form>
+
+          <!-- Spinner -->
+          <!-- <div id="loading">
+            <img src="img/loading.gif" alt="">
+          </div> -->
+
+          <!-- Loan breakdown -->
+          <div id="results" class="pt-4">
+            <h5>Breakdown</h5>
+            <div class="form-group pb-3">
+              <div class="input-group">
+                <span class="input-group-text">Monthly Payment</span>
+                <input id="monthly-payment" class="form-control" type="number" disabled>
+              </div>
+            </div>
+            <div class="form-group pb-3">
+              <div class="input-group">
+                <span class="input-group-text">Total Payment</span>
+                <input id="total-payment" class="form-control" type="number" disabled>
+              </div>
+            </div>
+            <div class="form-group pb-3">
+              <div class="input-group">
+                <span class="input-group-text">Total Interest</span>
+                <input id="total-interest" class="form-control" type="number" disabled>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
